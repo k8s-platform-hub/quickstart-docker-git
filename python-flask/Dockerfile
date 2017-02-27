@@ -1,13 +1,14 @@
 FROM python:3.5.2-alpine
 
-# copy requirements and install dependencies before copying source code as
-# copying the entire directory at once will trigger the installl step whenever
-# source code changes
-COPY requirements.txt /flask-app/
-RUN pip3 install -r /flask-app/requirements.txt
+WORKDIR /usr/src/app
 
-# Copy the source
-COPY app /flask-app/app
-WORKDIR /flask-app/app
+# install requirements
+# this way when you build you won't need to install again
+# and since COPY is cached we don't need to wait
+COPY requirements.txt /tmp/requirements.txt
+RUN pip3 install -r /tmp/requirements.txt
 
-CMD ["gunicorn", "-w 4", "-b 0.0.0.0:8080", "server:app"]
+COPY app /usr/src/app
+
+# App port number is configured through the gunicorn config file
+CMD ["gunicorn", "--config", "gunicorn_config.py", "server:app"]
