@@ -1,0 +1,13 @@
+{
+  "name": "hasura-express-example",
+  "version": "1.0.0",
+  "description": "Demo to show git push build and deploy",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
