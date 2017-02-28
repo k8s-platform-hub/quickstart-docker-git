@@ -1,0 +1,3 @@
+FROM busybox
+COPY ./Server /home/root/Server
+CMD /home/root/Server
