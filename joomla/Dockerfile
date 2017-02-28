@@ -1,5 +1,5 @@
 FROM joomla:latest
 
-COPY configuration.php-dist /var/www/html/installation/
+COPY myapp/src/conf/configuration.php-dist /var/www/html/installation/
 
 

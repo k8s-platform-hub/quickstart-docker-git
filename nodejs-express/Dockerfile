@@ -4,7 +4,7 @@ FROM mhart/alpine-node:7.6.0
 RUN mkdir /app
 
 # Add app source files
-ADD app /app/
+ADD myapp/src/ /app/
 
 #install node modules
 RUN cd /app && npm install
