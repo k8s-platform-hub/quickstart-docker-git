@@ -2,7 +2,7 @@ FROM ruby:2.2.6-alpine
 
 ENV APP_HOME /myapp/
 ADD ./.ruby-* $APP_HOME
-ADD ./myapp/Gemfile* $APP_HOME 
+ADD ./myapp/src/Gemfile* $APP_HOME 
 
 RUN apk --update add --virtual build-dependencies build-base ruby-dev openssl-dev libxml2-dev libxslt-dev \  
     sqlite-dev  libc-dev linux-headers nodejs tzdata
@@ -11,7 +11,7 @@ RUN gem install bundler
 
 RUN cd $APP_HOME ; bundle config build.nokogiri --use-system-libraries && bundle install --without development test
 
-ADD ./myapp/ $APP_HOME
+ADD ./myapp/src/ $APP_HOME
 RUN chown -R nobody:nogroup $APP_HOME
 USER nobody
 
