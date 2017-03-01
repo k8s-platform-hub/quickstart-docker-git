@@ -37,7 +37,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 
 // The entry point.
 func main() {
-  port := os.Getenv("PORT")
+  port := os.Getenv("APP_PORT")
 
   // port is not present then set default.
   if port == "" {
