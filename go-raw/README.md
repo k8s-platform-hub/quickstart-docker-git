@@ -6,7 +6,7 @@ There are two dockerfile,
 * **Prod** - Go Production has a barebone base image with a compiled binary copied onto the go-server. This ensure that the image is light and there is no additional software which is required during development.
  ### What you will need!!
  * The Production Go setup needs you to have the go compiler installed on your pc.
- * You can run the `gobuild.sh` to build your server binaries.
+ * You can run the `myapp/gobuild.sh` to build your server binaries.
  * The Dockerfile-prod will have the production Dockerfile.
    * `docker build -t <image-name>:<version> -f Dockerfile-prod .`
 
