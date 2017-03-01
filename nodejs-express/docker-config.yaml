@@ -1,0 +1,5 @@
+image: "hasura/nodejs-express:0.1"
+port: [8080]
+volume_mounts: []
+env_variables: []
+hasura_allowed_roles: ["admin","user","anonymous"]

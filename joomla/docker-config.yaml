@@ -1,0 +1,7 @@
+image: "joomla:latest"
+port: [80]
+volume_mounts:
+    - config: "/var/www/html/installation/configuration.php-dist"
+    - data: "/var/www/html"
+env_variables: ["JOOMLA_DB_HOST","JOOMLA_DB_USER","JOOMLA_DB_PASSWORD","JOOMLA_DB_NAME"]
+hasura_allowed_roles: ["admin","user",anonymous"]

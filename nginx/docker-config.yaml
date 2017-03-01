@@ -1,0 +1,6 @@
+image: "nginx:latest"
+port: [80]
+volume_mounts:
+    - config: "/etc/nginx/nginx.conf"
+env_variables: ["NGINX_HOST", "NGINX_PORT"]
+hasura_allowed_roles: ["admin","user","anonymous"]

@@ -1,3 +1,10 @@
-How to use the templates?
+#How to use this repo?
 
-#to be added
+
+#Repo Structure
+
+
+#How to contribute?
+
+
+
