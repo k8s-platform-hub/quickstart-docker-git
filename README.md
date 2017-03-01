@@ -14,15 +14,6 @@ In every folder in this collection, you will be able to do any of the following:
 The aim is to maintain a collection of quickstart up-to-date base repos that
 are production ready.
 
-#How to use this repo?
-To use any base-repo, do the following:
-
-- Clone this repo:
-  ``git clone https://github.com/hasura/docker-git-ci-templates``
-- Copy the relevant base-repo:
-  ``mv docker-git-ci-templates/nodejs-express my-node-project``
-- Initialize your own git repo: ``cd my-node-project && git init``
-
 #Repo Structure
 Every base repo has the following structure:
 
@@ -36,6 +27,20 @@ Every base repo has the following structure:
 
 The README inside the base repo will contain instructions on what you
 can do next.
+
+
+#How to use base repo from this collection
+To use any base-repo, do the following:
+
+- Clone this repo:
+  ``git clone https://github.com/hasura/docker-git-ci-templates``
+- Copy the relevant base-repo:
+  ``mv docker-git-ci-templates/nodejs-express my-node-project``
+- Initialize your own git repo: ``cd my-node-project && git init``
+
+#git push integrations
+##This is how github works
+##This is how gitlab works
 
 #Contribution
 
