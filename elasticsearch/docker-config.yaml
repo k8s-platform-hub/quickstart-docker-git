@@ -1,7 +1,0 @@
-image: "elasticsearch:latest"
-port: [9200,9300]
-volume_mounts:
-    - config: "/usr/share/elasticsearch/config"
-    - data: "/usr/share/elasticsearch/data"
-env_variables: []
-hasura_allowed_roles: ["admin"]

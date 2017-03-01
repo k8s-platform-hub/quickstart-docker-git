@@ -1,8 +1,21 @@
+#Description
+Runs a MySQL server
+This is a stateful service that exposes TCP endpoints
 
-Docker Quickstart Guide:
+#Docker Quickstart
+- docker run -d -p 3306:3306 \
+    -e MYSQL_SOMETHING=asdf \
+    -e MYSQL_SOMETHING=asdf \
+    -e MYSQL_SOMETHING=asdf \
+    -v $(pwd)/data=/var/lib/mysql/data \
+    mysql:latest
 
-- docker build -t mysql-hasura:0.1
+#Git CI quickstart
+Typically, modify these files.
+Then git push origin master.
 
-RUN MYSQL DATABASE
-docker run --name mysql-wordpress -v /your/path/to/mysql:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=hasura -d -p 3306:3306 mysql-hasura:0.1
+#Build your own Docker image
+docker build -t my-mysql .
 
+#Advanced options
+MYSQL_ROOT_PASSWORD: set this option if you want to X

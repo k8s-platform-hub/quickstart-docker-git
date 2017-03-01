@@ -1,7 +1,0 @@
-image: "mysql:latest"
-port: [3306]
-volume_mounts:
-    - config: "/etc/mysql/conf.d"
-    - data: "/var/lib/mysql"
-env_variables: ["MYSQL_ROOT_PASSWORD","MYSQL_DATABASE","MYSQL_USER","MYSQL_PASSWORD","MYSQL_ALLOW_EMPTY_PASSWORD","MYSQL_RANDOM_ROOT_PASSWORD","MYSQL_ONETIME_PASSWORD"]
-hasura_allowed_roles: ["admin"]
