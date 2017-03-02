@@ -44,3 +44,11 @@ Default Port for application is `9200` .
   ```bash
   $ docker run -d -p 9200:9200 -e ES_JAVA_OPTS='<HEAP_SIZE>' elasticsearch-index:<tag>
   ```
+
+### **Volumes**
+
+* `/usr/share/elasticsearch/data` - Will contain the elasticsearch data files
+
+  ```bash
+  $ docker run -d -p 9200:9200 -v /your/path/to/es_data:/usr/share/elasticsearch/data elasticsearch-index:<tag>
+  ```
