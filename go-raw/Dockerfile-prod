@@ -1,3 +1,3 @@
 FROM busybox
-COPY ./myapp/Server /home/root/Server
+COPY ./app/bin/Server /home/root/Server
 CMD /home/root/Server
