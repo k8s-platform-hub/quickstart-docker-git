@@ -1,5 +1,5 @@
 image: "python-flask:<tag>"
 port: [8080]
 volume_mounts: []
-env_variables: []
+env_variables: ["APP_PORTS"]
 hasura_allowed_roles: ["admin","user","anonymous"]
