@@ -1,14 +1,11 @@
 FROM mhart/alpine-node:7.6.0
 
-#create app dir
-RUN mkdir /app
+WORKDIR /src
 
 # Add app source files
-ADD myapp/src/ /app/
+ADD myapp/src /src
 
 #install node modules
-RUN cd /app && npm install
-
-WORKDIR /app
+RUN npm install
 
 CMD ["node", "server.js"]
