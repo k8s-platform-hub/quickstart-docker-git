@@ -1,4 +1,5 @@
 #Introduction
+
 This is a collection of ready to use base repos of common web frameworks,
 databases, CMSs that can be easily built as Docker images or integrated into
 a git based pipeline.
@@ -15,6 +16,7 @@ The aim is to maintain a collection of quickstart up-to-date base repos that
 are production ready.
 
 #Repo Structure
+
 Every base repo has the following structure:
 
 ```
@@ -30,6 +32,7 @@ can do next.
 
 
 #How to use base repo from this collection
+
 To use any base-repo, do the following:
 
 - Clone this repo:
@@ -39,7 +42,9 @@ To use any base-repo, do the following:
 - Initialize your own git repo: ``cd my-node-project && git init``
 
 #git push integrations
+
 ##This is how github works
+
 ##This is how gitlab works
 
 #Contribution
