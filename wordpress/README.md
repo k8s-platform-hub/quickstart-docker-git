@@ -1,13 +1,49 @@
-RUN MYSQL DATABASE
-docker run --name mysql-wordpress -v /your/path/to/mysql:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=hasura -d -p 3306:3306 mysql-hasura:0.1
+# Configure MYSQL
 
-VOLUME: /var/lib/mysql
+Build the Docker image from the `mysql` project and run `mysql` container.
 
-RUN WORDPRESS APP
+# Quickstart - Build your own Docker image#
 
-docker run --name wordpress-app -e WORDPRESS_DB_HOST=192.168.99.100 -e WORDPRESS_DB_PASSWORD=hasura -v /your/path/to/wordpress:/var/www/html/wp-content/ -d -p 8080:80 wordpress-hasura:0.1
+Build the Docker image using the following command
 
-VOLUME: /var/www/html/
+```bash
+$ docker build -t php-wordpress:<tag> .
+```
 
-TODO:
-Configure Mails (SMTP) to be sent for Signup/Forgot Password
+Run the Docker container using the command below.
+
+```bash
+$ docker run -d -p 8080:80 php-wordpress:<tag>
+$ docker run -e WORDPRESS_DB_HOST=<DOCKER_IP> -e WORDPRESS_DB_PASSWORD=<DB_PASSWORD> -v /your/path/to/wordpress:/var/www/html/wp-content/ -d -p 8080:80 php-wordpress:<tag>
+```
+
+# Quickstart - git based pipeline
+
+Follow the steps mentioned below for git based pipeline
+
+1. Ensure that you have a git project
+2. Commit your changes
+
+    ```bash
+    $ git add .
+    $ git commit -m "message"
+    ```
+
+3. Push the changes to git
+
+    ```bash
+    $ git push <remote> master
+    ```
+
+# Advanced usage
+
+### **Environment Variables**
+
+* `WORDPRESS_DB_HOST` - Host of MYSQL server (Docker IP).
+* `WORDPRESS_DB_USER` - UserName of MYSQL database (defaults to "root").
+* `WORDPRESS_DB_PASSWORD` - Password of MYSQL database.
+* `WORDPRESS_DB_NAME` - Database Name (defaults to "wordpress").
+
+### **Volumes**
+
+* `/var/www/html` - Should contain the wordpress source files (`/your/path/to/wordpress`)
