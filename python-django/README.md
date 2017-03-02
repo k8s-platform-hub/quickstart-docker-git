@@ -17,7 +17,7 @@ $ docker run -d -p 8080:8080 python-django:<tag>
 Follow the steps mentioned below for git based pipeline
 
 1. Ensure that you have a git project
-2. Edit `app/src/helloworld/views.py`
+2. Edit `app/src/helloworld/views.py` for controllers. `app/src/helloworld/urls.py` for routes
 3. Commit your changes
 
     ```bash
