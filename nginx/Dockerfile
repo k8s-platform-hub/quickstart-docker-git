@@ -1,4 +1,4 @@
-FROM nginx
+FROM nginx:latest
 
-COPY myapp/src/ /usr/share/nginx/html
-COPY myapp/conf/nginx.conf /etc/nginx
+COPY app/src/ /usr/share/nginx/html
+COPY app/conf/nginx.conf /etc/nginx

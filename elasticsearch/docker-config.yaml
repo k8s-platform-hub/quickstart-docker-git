@@ -1,0 +1,6 @@
+image: "elasticsearch:latest"
+port: 9200
+volume_mounts: 
+  - config: /usr/share/elasticsearch/config
+  - data: /usr/share/elasticsearch/data
+env_variables: []

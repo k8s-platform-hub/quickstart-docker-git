@@ -1,4 +1,5 @@
 image: "wordpress:latest"
 port: [80]
-volume_mounts: []
+volume_mounts:
+  - data: /var/www/html
 env_variables: ["WORDPRESS_DB_HOST","WORDPRESS_DB_USER", "WORDPRESS_DB_PASSWORD"]

@@ -1,4 +1,4 @@
-image: "python-flask:<tag>"
+image: "go-server:<tag>"
 port: [8080]
 volume_mounts: []
 env_variables: []

@@ -1,5 +1,5 @@
 FROM elasticsearch:latest
 
 #Copy conf
-ADD app/conf.yaml /elasticsearch/conf.yaml
+COPY app/conf/elasticsearch.yml /usr/share/elasticsearch/config/
 

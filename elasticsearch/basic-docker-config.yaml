@@ -1,4 +1,0 @@
-image: "elasticsearch:latest"
-port: 9200
-volume: /usr/share/elasticsearch/data
-env_variables: []

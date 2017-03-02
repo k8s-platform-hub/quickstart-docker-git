@@ -1,4 +1,4 @@
-image: "python-flask:<tag>"
+image: "php-apache:0.1"
 port: [8080]
 volume_mounts: []
 env_variables: []

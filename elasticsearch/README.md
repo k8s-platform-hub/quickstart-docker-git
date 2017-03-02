@@ -3,13 +3,13 @@
 Build the Docker image using the following command
 
 ```bash
-$ docker build -t python-flask:<tag> .
+$ docker build -t elasticsearch-index:<tag> .
 ```
 
 Run the Docker container using the command below.
 
 ```bash
-$ docker run -d -p 8080:8080 python-flask:<tag>
+$ docker run -d -p 9200:9200 elasticsearch-index:<tag>
 ```
 
 # Quickstart - git based pipeline
@@ -17,7 +17,7 @@ $ docker run -d -p 8080:8080 python-flask:<tag>
 Follow the steps mentioned below for git based pipeline
 
 1. Ensure that you have a git project
-2. Edit `app/src/server.py`
+2. Edit `app/conf/elasticsearch.yml` for any configuration changes
 3. Commit your changes
 
     ```bash
@@ -35,22 +35,12 @@ Follow the steps mentioned below for git based pipeline
 
 ### **Port**
 
-Default Port for application is `8080` .
-
-Application port can be changed by modifying the variable `bind` in  `app/conf/gunicorn_config.py` or setting Environment Variable
-
-```python
-bind = "0.0.0.0:" + os.environ.get("APP_PORTS", "<NEW_PORT>")
-```
-
-```bash
-$ docker run -d -p 8080:<NEW_PORT> python-flask:<tag>
-```
+Default Port for application is `9200` .
 
 ### **Environment Variables**
 
-* `APP_PORTS` - Application port can also be specified by setting APP_PORTS ENV
+* `ES_JAVA_OPTS` - Heap Size can be specified
 
   ```bash
-  $ docker run -d -p 8080:<NEW_PORT> -e APP_PORTS='<NEW_PORT>' python-flask:<tag>
+  $ docker run -d -p 9200:9200 -e ES_JAVA_OPTS='<HEAP_SIZE>' elasticsearch-index:<tag>
   ```
