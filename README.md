@@ -41,11 +41,13 @@ To use any base-repo, do the following:
   ``mv docker-git-ci-templates/nodejs-express my-node-project``
 - Initialize your own git repo: ``cd my-node-project && git init``
 
-# git push integrations
+# git push integrations for automated Docker hub builds
 
-## This is how github works
+All base repos in this collection can readily be integrated to setup an
+automated docker image build system.
 
-## This is how gitlab works
+Read here for more details: https://docs.docker.com/docker-hub/github/ 
+
 
 # Contribution
 
