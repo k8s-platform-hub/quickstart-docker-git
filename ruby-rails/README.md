@@ -17,7 +17,7 @@ $ docker run -d -p 8080:8080 ruby-rails:<tag>
 Follow the steps mentioned below for git based pipeline
 
 1. Ensure that you have a git project
-2. Edit `app/src/app/controllers/welcome_controller.rb`
+2. Edit `app/src/app/controllers/welcome_controller.rb` for changing index controller
 3. Commit your changes
 
     ```bash
