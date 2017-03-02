@@ -22,7 +22,7 @@ Every base repo has the following structure:
 ```
 /
 --Dockerfile
---basic-docker-config.yaml
+--docker-config.yaml
 --README.md
 --app/
 ```
