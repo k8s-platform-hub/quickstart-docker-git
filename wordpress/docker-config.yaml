@@ -1,4 +1,4 @@
-image: "wordpress:latest"
+image: "php-wordpress:<tag>"
 port: [80]
 volume_mounts:
   - data: /var/www/html
