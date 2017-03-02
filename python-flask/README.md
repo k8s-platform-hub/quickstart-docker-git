@@ -1,4 +1,48 @@
-Docker Quickstart Guide:
+# Quickstart - Build your own Docker image#
 
-- docker build -t python-flask:0.1
-- docker run -d -p 8080:8080 python-flask:0.1
+Build the Docker image using the following command
+
+```bash
+$ docker build -t python-flask:<tag> .
+```
+
+Run the Docker container using the command below.
+
+```bash
+$ docker run -d -p 8080:8080 python-flask:<tag>
+```
+
+# Quickstart - git based pipeline
+
+Follow the steps mentioned below for git based pipeline
+
+1. Ensure that you have a git project
+2. Edit `app/src/server.py`
+3. Commit your changes
+   * ```bash
+     $ git add .
+     $ git commit -m "message"
+     ```
+4. Push the changes to git
+   * ```bash
+     $ git push <remote> master
+     ```
+
+# Advanced usage
+
+### `Port`
+
+Default Port for application is `8080`
+
+Application port can be changed by modifying the variable `bind` in  `app/conf/gunicorn_config.py` or setting Environment Variable
+
+```python
+bind = "0.0.0.0:" + os.environ.get("APP_PORTS", "<NEW_PORT>")
+```
+
+### `Environment Variables`
+
+* `APP_PORTS` - Application port can also be specified by setting APP_PORTS ENV.
+  ```bash
+  $ docker run -d -p 8080:8080 -e APP_PORTS='<NEW_PORT>' python-flask:<tag>
+  ```
