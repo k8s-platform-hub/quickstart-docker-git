@@ -1,4 +1,4 @@
-image: "hasura/ruby-rails:0.1"
+image: "ruby-rails:0.1"
 port: [8080]
 volume_mounts: []
 env_variables: ["SECRET_KEY_BASE"]
