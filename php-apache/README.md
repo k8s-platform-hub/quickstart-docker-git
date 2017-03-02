@@ -17,7 +17,7 @@ $ docker run -d -p 8080:8080 php-apache:<tag>
 Follow the steps mentioned below for git based pipeline
 
 1. Ensure that you have a git project
-2. Edit `app/src/index.py`
+2. Edit `app/src/index.php` for any changes required
 3. Commit your changes
 
     ```bash
