@@ -48,5 +48,5 @@ bind = "0.0.0.0:" + os.environ.get("APP_PORTS", "<NEW_PORT>")
 * `APP_PORTS` - Application port can also be specified by setting APP_PORTS ENV
 
   ```bash
-  $ docker run -d -p 8080:8080 -e APP_PORTS='<NEW_PORT>' python-flask:<tag>
+  $ docker run -d -p 8080:<NEW_PORT> -e APP_PORTS='<NEW_PORT>' python-flask:<tag>
   ```
