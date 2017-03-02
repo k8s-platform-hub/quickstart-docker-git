@@ -1,4 +1,4 @@
-#Introduction
+# Introduction
 
 This is a collection of ready to use base repos of common web frameworks,
 databases, CMSs that can be easily built as Docker images or integrated into
@@ -15,7 +15,7 @@ In every folder in this collection, you will be able to do any of the following:
 The aim is to maintain a collection of quickstart up-to-date base repos that
 are production ready.
 
-#Repo Structure
+# Repo Structure
 
 Every base repo has the following structure:
 
@@ -31,7 +31,7 @@ The README inside the base repo will contain instructions on what you
 can do next.
 
 
-#How to use base repo from this collection
+# How to use base repo from this collection
 
 To use any base-repo, do the following:
 
@@ -41,13 +41,13 @@ To use any base-repo, do the following:
   ``mv docker-git-ci-templates/nodejs-express my-node-project``
 - Initialize your own git repo: ``cd my-node-project && git init``
 
-#git push integrations
+# git push integrations
 
-##This is how github works
+## This is how github works
 
-##This is how gitlab works
+## This is how gitlab works
 
-#Contribution
+# Contribution
 
 Please contribute to this repository! Please visit github issues to
 see where you can pitch in.
