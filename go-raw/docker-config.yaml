@@ -1,4 +1,4 @@
-image: "hasura/go-server:1.0"
+image: "go-server:<tag>"
 port: [8080]
 volume_mounts: []
 env_variables: []
