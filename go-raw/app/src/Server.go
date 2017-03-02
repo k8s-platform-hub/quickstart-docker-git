@@ -3,7 +3,6 @@ package main
 import (
   "os"
   "fmt"
-  "strings"
   "net/http"
 )
 
@@ -12,12 +11,13 @@ import (
  */
 func errorHandler(w http.ResponseWriter, r *http.Request, status int) {
     w.WriteHeader(status)
+    w.Header().Set("Content-Type", "text/html")
     if status == http.StatusNotFound {
       fmt.Println("Page not found url: " + r.URL.Path)
-      fmt.Fprint(w, "(404) Page Not Found!")
+      fmt.Fprint(w, "<h1>(404) Page Not Found!</h1>")
       return
     }
-    fmt.Fprint(w, "Something went wrong! -- go server")
+    fmt.Fprint(w, "<h1>Something went wrong! -- go server</h1>")
 }
 
 /**
@@ -28,11 +28,9 @@ func handler(w http.ResponseWriter, r *http.Request) {
     errorHandler(w, r, http.StatusNotFound)
     return
   }
-  domain := strings.Split(r.Host, ":")[0]
-
   w.Header().Set("Content-Type", "text/html")
   w.WriteHeader(200)
-  fmt.Fprintf(w, `<h2>Hello world</h2>`, domain, strings.Split(domain, ".")[0])
+  fmt.Fprintf(w, `<h1>Hello world</h1>`)
 }
 
 // The entry point.
