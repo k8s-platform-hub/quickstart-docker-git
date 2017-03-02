@@ -33,15 +33,6 @@ If the production image has a different build instruction-set found in **Dockerf
   # Example for a run with change in environment variable for port.
   docker run -d -p 7000:7000 -e APP_PORT=7000 go-server:1.0
 ```
-Once your done with the testing remember to stop and delete your container, this will help you avoid issues during re-deployment of the container. Below are the commands need to terminal docker container.
-```sh
-  # find the container id
-  docker ps -a
-  # stop the container using the container-fluid
-  docker stop <container-id>
-  # remove the container from the system
-  docker rm <container-id>
-```
 
 ### Git Based Pipeline
 > Follow the steps mentioned below
