@@ -10,7 +10,7 @@ In every folder in this collection, you will be able to do any of the following:
 - Initialise a git repo, and run ``git push`` to push to github/gitlab that can
   be integrated with a docker registry like docker hub or gitlab's pipelines
 - Use ``docker run`` and get a running container. Basic configuration flags are
-  specified in basic-docker-config.yaml.
+  specified in docker-config.yaml.
 
 The aim is to maintain a collection of quickstart up-to-date base repos that
 are production ready.
