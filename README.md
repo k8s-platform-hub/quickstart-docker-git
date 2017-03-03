@@ -36,7 +36,7 @@ can do next.
 To use any base-repo, do the following:
 
 - Clone this repo:
-  ``git clone https://github.com/hasura/docker-git-ci-templates``
+  ``git clone https://github.com/hasura/quickstart-docker-git``
 - Copy the relevant base-repo:
   ``mv docker-git-ci-templates/nodejs-express my-node-project``
 - Initialize your own git repo: ``cd my-node-project && git init``
