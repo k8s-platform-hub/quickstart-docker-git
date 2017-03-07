@@ -43,7 +43,12 @@ To use any base-repo, do the following:
   ``git clone https://github.com/hasura/quickstart-docker-git``
 - Copy the relevant base-repo:
   ``mv docker-git-ci-templates/nodejs-express my-node-project``
-- Initialize your own git repo: ``cd my-node-project && git init``
+
+  ![git clone example](1-git-clone.png)
+
+- Initialize your own git repo inside this folder if you want: ``cd my-node-project && git init``
+- Build and run your own docker image: ``docker build -t my-app .``
+  ![git clone example](2-docker-run-build.png)
 
 # git push integrations for automated Docker hub builds
 
