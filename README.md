@@ -48,7 +48,7 @@ To use any base-repo, do the following:
 
 - Initialize your own git repo inside this folder if you want: ``cd my-node-project && git init``
 - Build and run your own docker image: ``docker build -t my-app .``
-  ![git clone example](2-docker-run-build.png)
+  ![git clone example](2-docker-build-run.png)
 
 # git push integrations for automated Docker hub builds
 
