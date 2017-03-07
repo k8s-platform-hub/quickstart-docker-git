@@ -1,10 +1,10 @@
 # An existential introduction
 
-There are 2 existential questions that one must answer before embarking on a
+There are 2 questions that one must answer before embarking on a
 Docker based project.
 
 1. What should the Dockerfile be? Can I avoid downloading the Internet everytime I run a build?
-2. What should my git repo look like? Will I develop inside, or outside a container?
+2. What should my git repo look like? What does my development workflow look like?
 
 The aim is to maintain a collection of quickstart up-to-date base repos that
 are ready to go.
