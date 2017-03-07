@@ -52,7 +52,7 @@ To use any base-repo, do the following:
 All base repos in this collection can readily be integrated to setup an
 automated docker image build system.
 
-Read here for more details: https://docs.docker.com/docker-hub/github/ 
+Read here for more details: [https://docs.docker.com/docker-hub/github/](https://docs.docker.com/docker-hub/github/) 
 
 
 # Contribution
