@@ -1,14 +1,15 @@
+# An existential introduction
+
 There are 2 existential questions that one must answer before embarking on a
 Docker based project.
 
 1. What should the Dockerfile be? Can I avoid downloading the Internet everytime I run a build?
 2. What should my git repo look like? Will I develop inside, or outside a container?
 
-# Introduction
+The aim is to maintain a collection of quickstart up-to-date base repos that
+are ready to go.
 
-This is a collection of ready to use base repos of a few web frameworks,
-databases, CMSs that can be easily built as Docker images or integrated into
-a git based pipeline.
+# What you get
 
 In every folder in this collection, you will be able to do any of the following:
 
@@ -17,9 +18,6 @@ In every folder in this collection, you will be able to do any of the following:
   be integrated with a docker hub's automated builds
 - Use ``docker run`` and get a running container. Basic configuration options are
   specified in docker-config.yaml.
-
-The aim is to maintain a collection of quickstart up-to-date base repos that
-are ready to go.
 
 # Repo Structure
 
