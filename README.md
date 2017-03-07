@@ -50,6 +50,10 @@ To use any base-repo, do the following:
 - Build and run your own docker image: ``docker build -t my-app .``
   ![git clone example](2-docker-build-run.png)
 
+- Test if this app is wokring by making a request to the container, at '/'.
+  ![git clone example](3-curl.png)
+
+
 # git push integrations for automated Docker hub builds
 
 All base repos in this collection can readily be integrated to setup an
