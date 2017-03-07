@@ -51,7 +51,7 @@ To use any base-repo, do the following:
   ![git clone example](2-docker-build-run.png)
 
 - Test if this app is wokring by making a request to the container, at '/'.
-  ![git clone example](3-curl.png)
+  ![curl example](3-curl.png =550px)
 
 
 # git push integrations for automated Docker hub builds
