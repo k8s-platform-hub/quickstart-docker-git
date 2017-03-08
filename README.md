@@ -6,8 +6,8 @@ Docker based project.
 1. What should the Dockerfile be? Can I avoid downloading the Internet everytime I run a build?
 2. What should my git repo look like? What does my development workflow look like?
 
-The aim is to maintain a collection of quickstart up-to-date base repos that
-are ready to go.
+This repository is aims to maintain a collection of up-to-date quickstart base repos that
+are ready to be used in a project.
 
 # What you get
 
@@ -31,8 +31,7 @@ Every base repo has the following structure:
 --app/
 ```
 
-The README inside the base repo will contain instructions on what you
-can do next.
+The README inside the base repo will contain further instructions.
 
 
 # How to use base repo from this collection
