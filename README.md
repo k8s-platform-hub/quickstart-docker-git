@@ -54,7 +54,7 @@ To use any base-repo, do the following:
   ![curl example](3-curl.png)
 
 
-# git push integrations for automated Docker hub builds
+# Automated Docker hub builds
 
 All base repos in this collection can readily be integrated to setup an
 automated docker image build system.
@@ -64,8 +64,11 @@ Read here for more details: [https://docs.docker.com/docker-hub/github/](https:/
 
 # Contribution
 
-Please contribute to this repository! Please visit github issues to
+Please contribute to this repository! Please visit github [issues](https://github.com/hasura/quickstart-docker-git/issues) to
 see where you can pitch in.
+
+1. Optimise Dockerfiles
+2. Add support for more frameworks
 
 We want you to:
 
