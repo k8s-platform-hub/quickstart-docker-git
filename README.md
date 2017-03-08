@@ -1,4 +1,4 @@
-# Introduction
+# quickstart-docker-git
 
 There are 2 existential questions that one must answer before embarking on a
 Docker based project.
