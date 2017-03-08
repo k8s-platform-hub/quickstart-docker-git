@@ -67,12 +67,6 @@ Read here for more details: [https://docs.docker.com/docker-hub/github/](https:/
 Please contribute to this repository! Please visit github [issues](https://github.com/hasura/quickstart-docker-git/issues) to
 see where you can pitch in.
 
-1. Optimise Dockerfiles
-2. Add support for more frameworks
-
-We want you to:
-
-- Contribute towards and create more sample frameworks
-- Improve existing base repos based on your experience. Eg: make it more
-  production ready, to improve docker-image build times, or to improve
-  docker image sizes.
+1. Optimise Dockerfiles for faster builds
+2. Optimise Dockerfiles for production image builds (esp. for compiled languages)
+3. Add support for more frameworks
