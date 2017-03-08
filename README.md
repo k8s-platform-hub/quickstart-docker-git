@@ -1,6 +1,6 @@
-# An existential introduction
+# Introduction
 
-There are 2 questions that one must answer before embarking on a
+There are 2 existential questions that one must answer before embarking on a
 Docker based project.
 
 1. What should the Dockerfile be? Can I avoid downloading the Internet everytime I run a build?
