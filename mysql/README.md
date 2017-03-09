@@ -12,24 +12,6 @@ Run the Docker container using the command below.
 $ docker run -d -p 3306:3306 -e MYSQL_ROOT_PASSWORD="<PASSWORD>" -v /my/own/datadir:/var/lib/mysql hasura-mysql:<tag>
 ```
 
-# Quickstart - git based pipeline
-
-Follow the steps mentioned below for git based pipeline
-
-1. Ensure that you have a git project
-2. Commit your changes
-
-    ```bash
-    $ git add .
-    $ git commit -m "message"
-    ```
-
-3. Push the changes to git
-
-    ```bash
-    $ git push <remote> master
-    ```
-
 # Advanced usage
 
 ### **Environment Variables**
