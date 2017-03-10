@@ -81,9 +81,9 @@ Read here for more details:
 
 Please fork, file comments/bugs and submit your PRs!  We've created a list of
 issues where active help is required:
-[help-wanted](https://github.com/hasura/quickstart-docker-git/issues).
+[help-wanted](https://github.com/hasura/quickstart-docker-git/issues?q=is%3Aissue+is%3Aopen+label%3Ahelp-wanted).
 
 Specifically,
 
-1. Optimise Dockerfiles for faster builds, or for production (esp. for compiled languages)
-2. Add support for more frameworks
+1. Add support for more frameworks
+1. Optimise ``Dockerfile``s for faster builds, or for production (esp. for compiled languages)

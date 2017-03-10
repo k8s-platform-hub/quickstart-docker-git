@@ -1,3 +1,5 @@
 theme: jekyll-theme-cayman
 title: Quickstart for docker projects
 description: Boostrap your project with a Dockerfile and a folder structure that works.
+author:
+    url: https://hasura.io
