@@ -1,9 +1,9 @@
 # Prerequisites
-1. mysql
+1. [mysql] (https://github.com/hasura/quickstart-docker-git/tree/master/mysql)
 
 # Configure MYSQL
 
-Build the Docker image using our [`mysql`](https://github.com/hasura/quickstart-docker-git/tree/master/mysql) project and run `mysql` container.
+Build the Docker image using our [`mysql`](https://github.com/hasura/quickstart-docker-git/tree/master/mysql) project and run the `mysql` container.
 
 # Quickstart - Build your own Docker image#
 
