@@ -1,3 +1,3 @@
 theme: jekyll-theme-cayman
-title: Quickstart for Docker + Git projects
-description: A collection of ready to use Dockerfiles and git repos for common web-frameworks
+title: Quickstart for docker projects
+description: Boostrap your project with a Dockerfile and a folder structure that works.

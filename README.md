@@ -1,17 +1,12 @@
 # quickstart-docker-git
 
-There are 2 existential questions that one must answer before embarking on a
-Docker based service.
-
-1. What should the Dockerfile be? Can I avoid downloading the Internet everytime
-   I run a build?
-2. What should my git repo look like? What does my development workflow look
-   like?
+Sometimes getting to a good docker based setup for your new project is a
+little too inconvenient.
 
 This repository aims to maintain a collection of up-to-date quickstart base
-repos that are ready to be used.
+repos that will help you bootstrap your shiny new docker project.
 
-Some examples currently included:
+Some examples:
 - Static file service based on [nginx](https://github.com/hasura/quickstart-docker-git/tree/master/nginx)
 - Web service in Swift ([Vapor](https://github.com/hasura/quickstart-docker-git/tree/master/swift-vapor), [Perfect](https://github.com/hasura/quickstart-docker-git/tree/master/swift-perfect))
 - Deploying a [MySQL](https://github.com/hasura/quickstart-docker-git/tree/master/mysql) service
@@ -31,7 +26,7 @@ Folders in this repo represent base repos for web frameworks, CMSs or databases.
 # What is NOT included
 
 This is just a collection of quickstart repos. The idea is to modify the
-quickstart template as you need to from a basic setup that is working. Hence,
+quickstart template as you need to get to a basic setup that works. Hence,
 this doesn't include things like setting up docker-compose files or more
 advanced framework specific configurations yet.
 
@@ -90,7 +85,5 @@ issues where active help is required:
 
 Specifically,
 
-1. Optimise Dockerfiles for faster builds
-2. Optimise Dockerfiles for production image builds (esp. for compiled
-   languages)
-3. Add support for more frameworks
+1. Optimise Dockerfiles for faster builds, or for production (esp. for compiled languages)
+2. Add support for more frameworks
