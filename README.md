@@ -6,7 +6,7 @@ Docker based project.
 1. What should the Dockerfile be? Can I avoid downloading the Internet everytime I run a build?
 2. What should my git repo look like? What does my development workflow look like?
 
-This repository is aims to maintain a collection of up-to-date quickstart base repos that
+This repository aims to maintain a collection of up-to-date quickstart base repos that
 are ready to be used in a project.
 
 # What you get
@@ -41,15 +41,15 @@ To use any base-repo, do the following:
 - Clone this repo:
   ``git clone https://github.com/hasura/quickstart-docker-git``
 - Copy the relevant base-repo:
-  ``mv docker-git-ci-templates/nodejs-express my-node-project``
+  ``mv quickstart-docker-git/nodejs-express my-node-project``
 
   ![git clone example](https://raw.githubusercontent.com/hasura/quickstart-docker-git/master/_docs/1-git-clone.png)
 
 - Initialize your own git repo inside this folder if you want: ``cd my-node-project && git init``
-- Build and run your own docker image: ``docker build -t my-app .``
+- Build and run your own docker image: ``docker build -t my-node-app .``
   ![git clone example](https://raw.githubusercontent.com/hasura/quickstart-docker-git/master/_docs/2-docker-build-run.png)
 
-- Test if this app is wokring by making a request to the container, at '/'.
+- Test if this app is working by making a request to the container, at '/'.
   ![curl example](https://raw.githubusercontent.com/hasura/quickstart-docker-git/master/_docs/3-curl.png)
 
 
