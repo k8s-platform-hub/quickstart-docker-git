@@ -40,7 +40,7 @@ Default Port for application is `8080` .
 Application port can be changed by modifying the variable `bind` in  `app/conf/gunicorn_config.py` or setting Environment Variable
 
 ```python
-bind = "0.0.0.0:" + os.environ.get("APP_PORTS", "<NEW_PORT>")
+bind = "0.0.0.0:" + os.environ.get("APP_PORT", "<NEW_PORT>")
 ```
 
 ```bash
@@ -49,8 +49,8 @@ $ docker run -d -p 8080:<NEW_PORT> python-flask:<tag>
 
 ### **Environment Variables**
 
-* `APP_PORTS` - Application port can also be specified by setting APP_PORTS ENV
+* `APP_PORT` - Application port can also be specified by setting APP_PORT ENV
 
   ```bash
-  $ docker run -d -p 8080:<NEW_PORT> -e APP_PORTS='<NEW_PORT>' python-flask:<tag>
+  $ docker run -d -p 8080:<NEW_PORT> -e APP_PORT='<NEW_PORT>' python-flask:<tag>
   ```

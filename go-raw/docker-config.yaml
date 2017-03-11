@@ -1,5 +1,4 @@
 image: "go-server:<tag>"
-port: [8080]
-volume_mounts: []
+port: 8080
+volume_mounts: null
 env_variables: []
-hasura_allowed_roles: ["admin","user","anonymous"]

@@ -86,4 +86,12 @@ issues where active help is required:
 Specifically,
 
 1. Add support for more frameworks
-1. Optimise ``Dockerfile``s for faster builds, or for production (esp. for compiled languages)
+2. Optimise ``Dockerfile``s for faster builds, or for production (esp. for compiled languages)
+
+Some important things to keep in mind when contributing:
+
+1. Expose only one port, and one data volume to help keep things simple
+2. Annotate the ``Dockerfile`` with comments where you expect users to modify
+3. Try to document the following major use cases when writing your README: ``docker build``, ``git push`` based automated docker build, ``docker run``
+
+

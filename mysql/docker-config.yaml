@@ -1,6 +1,4 @@
-image: "hasura-mysql:<tag>"
-port: [3306]
-volume_mounts:
-  - data: /var/lib/mysql
+image: "my-mysql:<tag>"
+port: 3306
+volume_mounts: /var/lib/mysql
 env_variables: ["MYSQL_ROOT_PASSWORD","MYSQL_DATABASE","MYSQL_USER","MYSQL_PASSWORD"]
-hasura_allowed_roles: ["admin"]
