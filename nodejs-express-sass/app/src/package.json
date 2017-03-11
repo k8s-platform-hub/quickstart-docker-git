@@ -1,0 +1,16 @@
+{
+  "name": "hasura-nodejs-express-sass-example",
+  "version": "1.0.0",
+  "description": "Demo to show git push build and deploy",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Verghese Koshy <koshy@hasura.io>",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.2"
+  },
+  "devDependencies": {
+    "node-sass": "^4.5.0"
+  }
+}
