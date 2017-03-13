@@ -1,0 +1,4 @@
+image: "ingensi/oracle-jdk"
+port: 9000
+volume_mounts: null
+env_variables: []
