@@ -1,9 +1,7 @@
 # Prerequisites
 1. [mysql] (https://github.com/hasura/quickstart-docker-git/tree/master/mysql)
 
-# Configure MYSQL
-
-Build the Docker image using our [`mysql`](https://github.com/hasura/quickstart-docker-git/tree/master/mysql) project and run the `mysql` container.
+You need to have a MySQL database up and running for Wordpress to work.
 
 # Quickstart - Build your own Docker image#
 
@@ -42,9 +40,9 @@ Follow the steps mentioned below for git based pipeline
 
 ### **Environment Variables**
 
-* `WORDPRESS_DB_HOST` - Host of MYSQL server (Docker IP).
-* `WORDPRESS_DB_USER` - UserName of MYSQL database (defaults to "root").
+* `WORDPRESS_DB_HOST` - Host of MySQL server.
 * `WORDPRESS_DB_PASSWORD` - Password of MYSQL database.
+* `WORDPRESS_DB_USER` - UserName of MYSQL database (defaults to "root").
 * `WORDPRESS_DB_NAME` - Database Name (defaults to "wordpress").
 
 ### **Volumes**
