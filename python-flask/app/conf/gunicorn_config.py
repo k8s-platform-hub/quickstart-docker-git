@@ -1,7 +1,7 @@
 import os
 import multiprocessing
 
-bind = "0.0.0.0:" + os.environ.get("APP_PORT", "8080")
+bind = "0.0.0.0:8080"
 workers = (multiprocessing.cpu_count() * 2) + 1
 accesslog = "-"
 access_log_format = '%(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"'
