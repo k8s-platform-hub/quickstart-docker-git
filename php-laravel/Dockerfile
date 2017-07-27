@@ -31,11 +31,14 @@ RUN usermod -u 1000 www-data && groupmod -g 1000 www-data
 
 #change the web_root to laravel /var/www/html/public folder
 RUN sed -i -e "s/html/html\/public/g" /etc/apache2/sites-enabled/000-default.conf
+#set the port to 8080
+RUN sed -i -e "s/VirtualHost \*:80/VirtualHost *:8080/g" /etc/apache2/sites-enabled/000-default.conf
+RUN sed -i -e "s/Listen 80/Listen 8080/g" /etc/apache2/ports.conf
 
 # enable apache module rewrite
 RUN a2enmod rewrite
 
-#copy source files and run composer
+#copy the composer dependencies only
 COPY app/composer.json $APP_HOME/composer.json
 
 # install all PHP dependencies
@@ -46,5 +49,3 @@ COPY app $APP_HOME/
 
 #change ownership of our applications
 RUN chown -R www-data:www-data $APP_HOME
-
-RUN sed -i -e "s/VirtualHost \*:80/VirtualHost *:8080/g" /etc/apache2/sites-enabled/000-default.conf
