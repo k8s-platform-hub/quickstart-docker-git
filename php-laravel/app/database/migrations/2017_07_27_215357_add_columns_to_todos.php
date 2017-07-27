@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddColumnsToUsers extends Migration
+class AddColumnsToTodos extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,9 @@ class AddColumnsToUsers extends Migration
      */
     public function up()
     {
-        Schema::table('users', function (Blueprint $table) {
+        Schema::table('todos', function (Blueprint $table) {
             $table->string('title');
             $table->integer('user_id');
-
-            $table->foreign('user_id')
-                ->references('id')
-                ->on('users')
-                ->onDelete('cascade');
         });
     }
 
@@ -31,7 +26,7 @@ class AddColumnsToUsers extends Migration
      */
     public function down()
     {
-        Schema::table('users', function (Blueprint $table) {
+        Schema::table('todos', function (Blueprint $table) {
             //
         });
     }
