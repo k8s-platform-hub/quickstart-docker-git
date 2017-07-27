@@ -11,6 +11,15 @@
 |
 */
 
+use App\Todo;
+
 Route::get('/', function () {
-    return view('welcome');
+    // $todos = App\Todo::all();
+
+    // foreach ($todos as $todo) {
+    //     echo $todo->title;
+    // }
+
+    return 'Hello world';
+    // return view('welcome');
 });

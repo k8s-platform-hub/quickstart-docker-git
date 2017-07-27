@@ -1,3 +1,0 @@
-- Add Dockerfile
-- Test with nginx-fpm
-- Test with DB connection and without DB connection
