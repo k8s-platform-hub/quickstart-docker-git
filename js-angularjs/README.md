@@ -1,6 +1,6 @@
 # angularjs-hasura
 
-AngularJS starter-kit with Hasura integration built-in.
+AngularJS starter-kit with Hasura integration built-in for **Angular 1.x (also known as just AngularJS)**
 
 Checkout the [tutorial](https://docs.hasura.io/0.13/tutorials/angularjs-starter-kit-with-yeoman-and-hasura.html) for more information on how to use this starter-kit.
 
