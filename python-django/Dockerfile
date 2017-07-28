@@ -1,6 +1,11 @@
-FROM python:3.5.2-alpine
+FROM python:3-stretch
 
 WORKDIR /usr/src/app
+
+# Install postgres
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    libpq-dev && \
+    rm -rf /var/lib/apt/lists/*
 
 # install requirements
 # this way when you build you won't need to install again
@@ -8,13 +13,15 @@ WORKDIR /usr/src/app
 COPY app/conf/requirements.txt /tmp/requirements.txt
 RUN pip3 install -r /tmp/requirements.txt
 
-# Copy the Configuration
+# Copy the Configuration and the Scripts
 COPY app/conf /conf
+COPY app/scripts /usr/src/scripts
+RUN chmod a+x /usr/src/scripts/migrate.sh
 
 # Copy the source
 COPY app/src /usr/src/app
 
-#CMD ["gunicorn", "-w 4", "-b 0.0.0.0:8080", "helloworld.wsgi"]
+WORKDIR /usr/src/app/helloworld
 
 # App port number is configured through the gunicorn config file
-CMD ["gunicorn", "--config", "/conf/gunicorn_config.py", "helloworld.wsgi"]
+ENTRYPOINT ["/usr/src/scripts/migrate.sh"]
