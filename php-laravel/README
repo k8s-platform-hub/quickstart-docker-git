@@ -1,3 +1,2 @@
 # Usage
-
-Head to: docs.hasura.io/tutorials/deploying-a-php-laravel-app to read learn how this docker image can be used.
+Head to: https://docs.hasura.io/0.13/tutorials/deploying-a-php-laravel-app.html to learn how to setup a Django project on the Hasura platform in seconds!
