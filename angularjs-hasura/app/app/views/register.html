@@ -1,0 +1,55 @@
+
+<form class="form-horizontal">
+<fieldset>
+
+<!-- Form Name -->
+<legend>Register</legend>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="textinput">Username</label>  
+  <div class="col-md-4">
+  <input ng-model="register.username" id="textinput" name="textinput" type="text" placeholder="Username" class="form-control input-md" required="">
+    
+  </div>
+</div>
+
+<!-- Password input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="password">Password</label>
+  <div class="col-md-4">
+    <input ng-model="register.password" id="password" name="password" type="password" placeholder="Password" class="form-control input-md">
+    
+  </div>
+</div>
+
+<!-- Password input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="confirmpassword">Confirm password</label>
+  <div class="col-md-4">
+    <input ng-model="register.confirmpassword" id="confirmpassword" name="confirmpassword" type="password" placeholder="Confirm password" class="form-control input-md">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="email">Email</label>  
+  <div class="col-md-4">
+  <input ng-model="register.email" id="email" name="email" type="text" placeholder="Email" class="form-control input-md">
+    
+  </div>
+</div>
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="submit"></label>
+  <div class="col-md-4">
+    <button ng-click="register.do()" id="submit" name="submit" class="btn btn-success">Submit</button>
+  </div>
+</div>
+</fieldset>
+
+
+</form>
+

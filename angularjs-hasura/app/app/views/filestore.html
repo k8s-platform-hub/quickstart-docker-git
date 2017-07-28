@@ -1,0 +1,27 @@
+<h3>Examples of using Hasura File APIs</h3>
+
+<ul>
+  <li>Goto permission tab in File Microservice in Hausra Console</li>
+  <li>Change permission to Custom</li>
+	<li>Add this url: http://console.hasura/filestorewebhook/public</li>
+  <li>Click Save</li>
+</ul>
+
+
+<h4>Now, you can use the following APIs:</h4>
+
+<p>These files can be used with img src tags also</p>
+
+&nbsp;<br/>
+<ul>
+  <li ng-if="filestore.file"> 
+    {{filestore.file}} 
+    <button ng-click="filestore.deleteFile(filestore.file)" class="btn btn-danger btn-xs">delete</button> 
+    <button ng-click="filestore.downloadFile(filestore.file)" class="btn btn-success btn-xs">download</button> 
+		
+  </li>
+</ul>
+
+<input id="file-upload" ng-model="filestore.newfile" type="file" class="input-file"></input>
+<br/>
+<button ng-click="filestore.uploadFile()" class="btn btn-success btn-sm">Upload file</button>

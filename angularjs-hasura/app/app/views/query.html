@@ -1,0 +1,38 @@
+<h3>Examples of using Hasura Data APIs</h3>
+<ul>
+  <li>Create a new table called "todo" using Hasura Console, and add the following columns:</li>
+  <ul>
+    <li>id : Integer (auto-increment)</li>
+    <li>title : Text</li>
+    <li>user_id : Integer</li>
+    <li>completed : Boolean</li>
+  </ul>
+
+  <li>Select 'id' as the Primary Key, click Create</li>
+
+  <li>Goto Permissions tab, click on 'Add permissions for a new role'.</li>
+  <li>Select User from the dropdown</li>
+  <li>Enter <pre>{"user_id": "REQ_USER_ID"}</pre> in all the Check and Filter fields.</li>
+  <li>Toggle All for Select</li>
+  <li>Tick completed on Update section</li>
+  <li>Save changes</li>
+</ul>
+
+<h4>Now, you can use the following APIs:</h4>
+
+<button ng-click="query.getTodos()" class="btn btn-info" >Show ToDos</button><br/>
+&nbsp;<br/>
+Click on each item to mark as completed! &nbsp;<br/>
+<ul>
+  <li 
+    ng-repeat="todo in query.todos" style="cursor:pointer" 
+    ng-click="query.toggleCompleted(todo.id, todo.completed)" 
+    ng-class="{'striked': todo.completed}">
+    <button ng-click="query.deleteTodo(todo.id)" class="btn btn-danger btn-xs">&times;</button> 
+    {{todo.title}}
+  </li>
+</ul>
+
+<input ng-model="query.todoTitle" type="text" placeholder="todo title" class="input-sm"></input>
+<button ng-click="query.addTodo(query.todoTitle)" class="btn btn-success">Add ToDo</button>
+
