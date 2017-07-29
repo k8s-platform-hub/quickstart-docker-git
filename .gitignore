@@ -2,3 +2,4 @@
 *.swo
 *node_modules
 *.pyc
+go-iris/vendor
