@@ -38,15 +38,19 @@ RUN a2enmod rewrite
 #copy the composer dependencies only
 COPY app/composer.json $APP_HOME/composer.json
 
-# install all PHP dependencies
-RUN composer install --no-scripts --no-autoloader --prefer-dist -vvv \
-            && rm -rf /root/.composer/cache
-
-COPY app $APP_HOME/
-
-#change ownership of our applications
-RUN chown -R www-data:www-data $APP_HOME
+# Install all PHP dependencies without the autoloader
+RUN composer install --no-ansi --no-dev --no-interaction --no-scripts --no-autoloader
 
 #set the port to 8080
 RUN sed -i -e "s/VirtualHost \*:80/VirtualHost *:8080/g" /etc/apache2/sites-enabled/000-default.conf
 RUN sed -i -e "s/Listen 80/Listen 8080/g" /etc/apache2/ports.conf
+
+#Copy the app
+COPY app $APP_HOME/
+
+# install all PHP dependencies
+RUN composer install --no-ansi --no-dev --no-interaction --no-scripts --optimize-autoloader \
+            && rm -rf /root/.composer/cache
+
+#change ownership of our applications
+RUN chown -R www-data:www-data $APP_HOME
