@@ -68,8 +68,9 @@ To use any base-repo, do the following:
   ![curl example](https://raw.githubusercontent.com/hasura/quickstart-docker-git/master/_docs/3-curl.png)
 
 
-# Deploying the base-repo on Hasura
-If you have gotten the base-repo of your choice to work on your machine, you may want to deploy your docker based API/service to the cloud. Using [Hasura](https://hasura.io), you can do that with a simple `git push` command. Follow these instructions to get started:
+# `git push` your code as a service on the cloud
+
+If you have gotten the base-repo of your choice to work on your machine, you may want to deploy your code as an API/service to the cloud. Using [Hasura](https://hasura.io), you can do that with a simple `git push` command. Follow these instructions to get started:
 
 - Get yourself a free Hasura project by signing up at the [Project Dashboard](https://dashboard.hasura.io)
 - Check out the reference documentation on [how to create a `git push` service and deploy your code as a service](https://docs.hasura.io/0.14/ref/custom-microservices/creating-git-push-microservices.html)
