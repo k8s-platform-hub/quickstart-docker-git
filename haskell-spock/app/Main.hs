@@ -8,7 +8,7 @@ import           Data.Text        (pack)
 main :: IO ()
 main = do
   appCfg <- defaultSpockCfg () PCNoDatabase ()
-  runSpock 8080 (spock appCfg routes)
+  runSpock port (spock appCfg routes)
 
 routes :: SpockM () () () ()
 routes = do
