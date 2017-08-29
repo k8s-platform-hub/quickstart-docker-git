@@ -1,4 +1,4 @@
-FROM r-base:latest
+FROM r-base:3.4.1
 
 MAINTAINER Tanmai Gopal "tanmaig@hasura.io"
 
