@@ -14,7 +14,7 @@ main = do
 routes :: SpockM () () () ()
 routes = do
   get root $ do
-    text $ pack "Hello Haskell Spock!"
+    text $ pack "Hello Haskell Spock"
 
   get "inside" $ do
-  	text $ pack "Hello from the inside!"
+  	text $ pack "Hello from the inside"
