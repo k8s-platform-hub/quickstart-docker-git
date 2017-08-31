@@ -17,7 +17,7 @@ Some examples:
 
 To use any of the starter kits, follow these instructions:
 
-1. Create a project: activate your free-trial project here: [https://dashboard.hasura.io](https://dashboard.hasura.io) (*requires sign up or log in*).
+1. Create a project: activate your free-trial project here - [https://dashboard.hasura.io](https://dashboard.hasura.io) (*requires sign up or log in*).
 
 2. Add your SSH key to the project console: [instructions on creating and adding your SSH key](https://docs.hasura.io/0.14/ref/cli/adding-SSH-keys-to-a-project.html).
 
@@ -69,7 +69,7 @@ That's it! Your starter kit in now live :balloon: :tada: :beers: :balloon:! Chec
 
 # Next Steps
 
-Yay! If you followed the 5 steps in the previous section, you would have deployed a web application to the cloud from scratch without breaking a sweat. To understand the Hasura platform in more detail, we highly recommend doing at least one of the following:
+If you followed the 5 steps in the previous section, you would have deployed a web application to the cloud from scratch without breaking a sweat. Yay! To understand the Hasura platform in more detail, we highly recommend doing at least one of the following:
 
 - Check out the mini-interactive tutorials built right into the project console.
 
@@ -77,7 +77,7 @@ Yay! If you followed the 5 steps in the previous section, you would have deploye
 
 - Check out our [documentation](https://docs.hasura.io)
 
-- Just talk to us - drop us an email at support@hasura.io or ping us using the chat window [here](https://hasura.io)
+- Talk to us - drop us an email at support@hasura.io or ping us using the chat window [here](https://hasura.io)
 
 # Additional Information
 
