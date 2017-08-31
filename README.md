@@ -4,7 +4,7 @@
 
 To help you quickly bootstrap a Hasura project in **5 easy steps** using a language/web-framework/product of your choice, this repository maintains a collection of starter kits or base repos for popular options.
 
-Using a starter kit, you will be able to quickly deploy a web-application, CMS, or database
+Using a starter kit, you will be able to quickly deploy a web-application, CMS, or database.
 
 Some examples:
 - Hello-world for [python-flask](https://github.com/hasura/quickstart-docker-git/tree/master/python-flask), [java-spring boot](https://github.com/hasura/quickstart-docker-git/tree/master/java-spring-boot), [nodejs-express](https://github.com/hasura/quickstart-docker-git/tree/master/nodejs-express) [php-apache](https://github.com/hasura/quickstart-docker-git/tree/master/php-apache), [.Net](https://github.com/hasura/quickstart-docker-git/tree/master/csharp-aspnet), etc.
@@ -13,11 +13,9 @@ Some examples:
 - Deploying a [MySQL](https://github.com/hasura/quickstart-docker-git/tree/master/mysql) service
 - [Wordpress](https://github.com/hasura/quickstart-docker-git/tree/master/wordpress)
 
-**Coming soon:** sample code for Hasura BaaS features like Data, Auth, and File APIs in each base repo.
-
 # Getting Started
 
-To use any base-repo, do the following:
+To use any of the base repos, follow these 5 simple steps:
 
 1. Create a project: activate your free-trial project here: [https://dashboard.hasura.io](https://dashboard.hasura.io) (*requires sign up or log in*)
 
@@ -31,9 +29,11 @@ To use any base-repo, do the following:
      
      ``git clone https://github.com/hasura/quickstart-docker-git``
 
+     ![git clone](_docs/quickstart-clone.png)
+
    - Copy the relevant base-repo: 
   
-     ``mv quickstart-docker-git/nodejs-express my-node-project``
+     ``cp -r quickstart-docker-git/nodejs-express my-node-project``
 
    - Initialize your own git repo inside this folder if you want:
      
@@ -49,7 +49,7 @@ To use any base-repo, do the following:
 
    - copy the git remote location from the console (*the service's manage page*)
      
-     ![git remote location](https://raw.githubusercontent.com/hasura/quickstart-docker-git/master/_docs/quickstart-git-remote-address.png)
+     ![git remote location](_docs/quickstart-git-remote-address.png)
      
    - Add the service's git remote
 
@@ -57,7 +57,7 @@ To use any base-repo, do the following:
      
      **Note: replace *\<service-name>*, *\<project-name>* with the name/sub-domain of the service created in step-3 and name of the project created in step-1 respectively. Check the image below for reference**
 
-![modify repo](https://raw.githubusercontent.com/hasura/quickstart-docker-git/master/_docs/quickstart-prep-repo.png)
+![modify repo](_docs/quickstart-prep-repo.png)
 
    - push your changes to the remote
 
@@ -65,12 +65,24 @@ To use any base-repo, do the following:
      
 That's it! Your starter kit in now live! Check it out at the service's external endpoint (*from step-3*).
 
-![external endpoint](https://raw.githubusercontent.com/hasura/quickstart-docker-git/master/_docs/quickstart-external-endpoint.png)
+![external endpoint](_docs/quickstart-external-endpoint.png)
 
+# Next Steps
+
+Yay! If you followed the 5 steps in the previous section, you would have deployed a web application to the cloud from scratch without breaking a sweat. To understand the Hasura platform in more detail, we highly recommend doing at least one of the following:
+
+- Check out the mini-interactive tutorials built right into the project console.
+  ![Console interactive tutorials](_docs/quickstart-console-explore.png)
+
+- Check out our [documentation](https://docs.hasura.io)
+
+- Just talk to us - drop us an email at support@hasura.io or ping us using the chat window [here](https://hasura.io)
 
 # Additional Information
 
-- **Docker**: You can use ``docker build`` and ``docker run`` to build your own image and get a running container. Basic configuration options are specified in docker-config.yaml. [Custom or 3rd party Docker images can be deployed on Hasura](https://docs.hasura.io/0.14/ref/custom-microservices/creating-docker-microservices.html) with the same ease.
+- **BaaS Samples**: Sample code is being added to each base repo for demonstrating Hasura BaaS features like [Data](https://docs.hasura.io/0.14/ref/hasura-microservices/data/index.html), [Auth](https://docs.hasura.io/0.14/ref/hasura-microservices/auth/index.html), [Notify](https://docs.hasura.io/0.14/ref/hasura-microservices/notify/index.html), and [File](https://docs.hasura.io/0.14/ref/hasura-microservices/filestore/index.html) services. Meanwhile, feel free to get in touch with us if you need any help.
+
+- **Docker**: You can use ``docker build`` and ``docker run`` to build your own image and get a running container. Basic configuration options are specified in ``docker-config.yaml``. [Custom or 3rd party Docker images can be deployed on Hasura](https://docs.hasura.io/0.14/ref/custom-microservices/creating-docker-microservices.html) with the same ease.
 
 - **What is not included**: This is just a collection of quickstart repos. The idea is to modify the quickstart template as you need to get to a basic setup that works. Hence, this doesn't include things like setting up docker-compose files or more advanced framework specific configurations yet.
 - **Repo structure**: Every base repo has the following structure:
