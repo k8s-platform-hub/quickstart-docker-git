@@ -13,4 +13,4 @@ RUN stack install text
 COPY . /usr/src/app
 RUN pwd
 RUN stack build --fast
-CMD stack exec haskell-spock-exe
+CMD stack exec haskell-spock

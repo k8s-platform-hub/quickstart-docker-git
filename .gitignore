@@ -3,3 +3,4 @@
 *node_modules
 *.pyc
 go-iris/vendor
+haskell-spock/build/rootfs
