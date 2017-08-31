@@ -1,4 +1,4 @@
 FROM scratch
 COPY rootfs/ /
 
-CMD naarad
+CMD haskell-spock
