@@ -29,7 +29,7 @@ To use any of the base repos, follow these 5 simple steps:
      
      ``git clone https://github.com/hasura/quickstart-docker-git``
 
-     ![git clone](_docs/quickstart-clone.png)
+     ![git clone](_docs/quickstart-git-clone.png)
 
    - Copy the relevant base-repo: 
   
@@ -49,7 +49,7 @@ To use any of the base repos, follow these 5 simple steps:
 
    - copy the git remote location from the console (*the service's manage page*)
      
-     ![git remote location](_docs/quickstart-git-remote-address.png)
+     ![git remote location](_docs/quickstart-console-git-remote.png)
      
    - Add the service's git remote
 
@@ -57,7 +57,7 @@ To use any of the base repos, follow these 5 simple steps:
      
      **Note: replace *\<service-name>*, *\<project-name>* with the name/sub-domain of the service created in step-3 and name of the project created in step-1 respectively. Check the image below for reference**
 
-![modify repo](_docs/quickstart-prep-repo.png)
+![modify repo](_docs/quickstart-repo-prepare.png)
 
    - push your changes to the remote
 
