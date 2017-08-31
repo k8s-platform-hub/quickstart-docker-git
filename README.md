@@ -65,7 +65,7 @@ To use any of the starter kits, follow these instructions:
      
 That's it! Your starter kit in now live :balloon: :tada: :beers: :balloon:! Check it out at the service's external endpoint (*from step-3*).
 
-![external endpoint](_docs/quickstart-external-endpoint.png)
+![external endpoint](_docs/quickstart-console-external-endpoint.png)
 
 # Next Steps
 
@@ -73,7 +73,7 @@ If you followed the 5 steps in the previous section, you would have deployed a w
 
 - Check out the mini-interactive tutorials built right into the project console.
 
-![Console interactive tutorials](_docs/quickstart-console-external-endpoint.png)
+![Console interactive tutorials](_docs/quickstart-console-explore.png)
 
 - Check out our [documentation](https://docs.hasura.io)
 
