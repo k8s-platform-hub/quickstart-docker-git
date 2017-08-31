@@ -9,3 +9,5 @@ RUN cd haskell-spock
 
 RUN stack init
 RUN stack build --fast
+
+CMD stack exec haskell-spock-exe

@@ -3,6 +3,7 @@
 import           Web.Spock
 import           Web.Spock.Config
 import           Data.Text        (pack)
+import           Conf
 
 
 main :: IO ()
