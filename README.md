@@ -1,88 +1,96 @@
 # quickstart-docker-git
 
-Sometimes getting to a good docker based setup for your new project is a
-little too inconvenient.
+[Hasura](https://hasura.io) is a platform for building and deploying application backends. The platform is a [Kubernetes](https://kubernetes.io) based PaaS (*Platform-as-a-Service to deploy backends*) and a PostgreSQL based BaaS (*Backend-as-a-Service to rapidly build backends*).
 
-This repository aims to maintain a collection of up-to-date quickstart base
-repos that will help you bootstrap your shiny new docker project.
+To help you quickly bootstrap a Hasura project in **5 easy steps** using a language/web-framework/product of your choice, this repository maintains a collection of starter kits or base repos for popular options.
+
+Using a starter kit, you will be able to quickly deploy a web-application, CMS, or database
 
 Some examples:
+- Hello-world for [python-flask](https://github.com/hasura/quickstart-docker-git/tree/master/python-flask), [java-spring boot](https://github.com/hasura/quickstart-docker-git/tree/master/java-spring-boot), [nodejs-express](https://github.com/hasura/quickstart-docker-git/tree/master/nodejs-express) [php-apache](https://github.com/hasura/quickstart-docker-git/tree/master/php-apache), [.Net](https://github.com/hasura/quickstart-docker-git/tree/master/csharp-aspnet), etc.
 - Static file service based on [nginx](https://github.com/hasura/quickstart-docker-git/tree/master/nginx)
 - Web service in Swift ([Vapor](https://github.com/hasura/quickstart-docker-git/tree/master/swift-vapor), [Perfect](https://github.com/hasura/quickstart-docker-git/tree/master/swift-perfect))
 - Deploying a [MySQL](https://github.com/hasura/quickstart-docker-git/tree/master/mysql) service
 - [Wordpress](https://github.com/hasura/quickstart-docker-git/tree/master/wordpress)
-- A simple [php-apache](https://github.com/hasura/quickstart-docker-git/tree/master/php-apache) quickstart
 
-# What is included
+**Coming soon:** sample code for Hasura BaaS features like Data, Auth, and File APIs in each base repo.
 
-Folders in this repo represent base repos for web frameworks, CMSs or databases.
-
-- Use ``docker build`` to build your own image
-- Initialise a git repo, and run ``git push`` to push to github that can be
-  integrated with a docker hub's automated builds
-- Use ``docker run`` and get a running container. Basic configuration options
-  are specified in docker-config.yaml.
-
-# What is NOT included
-
-This is just a collection of quickstart repos. The idea is to modify the
-quickstart template as you need to get to a basic setup that works. Hence,
-this doesn't include things like setting up docker-compose files or more
-advanced framework specific configurations yet.
-
-# Repo Structure
-
-Every base repo has the following structure:
-
-```
-/
---Dockerfile
---docker-config.yaml
---README.md
---app/
-```
-
-The README inside the base repo will contain further instructions.
-
-# How to use a base repo from this collection
+# Getting Started
 
 To use any base-repo, do the following:
 
-- Clone this repo:
-  ``git clone https://github.com/hasura/quickstart-docker-git``
+1. Create a project: activate your free-trial project here: [https://dashboard.hasura.io](https://dashboard.hasura.io) (*requires sign up or log in*)
 
-- Copy the relevant base-repo:
-  ``mv quickstart-docker-git/nodejs-express my-node-project``
-  ![git clone example](https://raw.githubusercontent.com/hasura/quickstart-docker-git/master/_docs/1-git-clone.png)
+2. Add your SSH key to the project console: [instructions on creating and adding your SSH key](https://docs.hasura.io/0.14/ref/cli/adding-SSH-keys-to-a-project.html)
 
-- Initialize your own git repo inside this folder if you want:
-  ``cd my-node-project && git init``
+3. Create a custom ``git push`` microservice: see [reference documentation](https://docs.hasura.io/0.14/ref/custom-microservices/creating-git-push-microservices.html#adding-a-git-push-enabled-service)
 
-- Build and run your own docker image:
-  ``docker build -t my-node-app .``
-  ![git clone example](https://raw.githubusercontent.com/hasura/quickstart-docker-git/master/_docs/2-docker-build-run.png)
+4. Clone and prep this repo to use your favourite language/framework:
+     
+   - Clone this repo:
+     
+     ``git clone https://github.com/hasura/quickstart-docker-git``
 
-- Test if this app is working by making a request to the container, at '/'.
-  ![curl example](https://raw.githubusercontent.com/hasura/quickstart-docker-git/master/_docs/3-curl.png)
+   - Copy the relevant base-repo: 
+  
+     ``mv quickstart-docker-git/nodejs-express my-node-project``
+
+   - Initialize your own git repo inside this folder if you want:
+     
+     ``cd my-node-project && git init``
+
+5. git push the base repo to deploy
+
+   - stage the files in the base repo and commit them.
+     
+     ``git add . ``
+     
+     ``git commit -m "hasura quickstart" ``
+
+   - copy the git remote location from the console (*the service's manage page*)
+     
+     ![git remote location](https://raw.githubusercontent.com/hasura/quickstart-docker-git/master/_docs/quickstart-git-remote-address.png)
+     
+   - Add the service's git remote
+
+     ``git remote add hasura ssh://hasura@<service-name>.<project-name>.hasura-app.io/~/git/<service-name>/``
+     
+     **Note: replace *\<service-name>*, *\<project-name>* with the name/sub-domain of the service created in step-3 and name of the project created in step-1 respectively. Check the image below for reference**
+
+![modify repo](https://raw.githubusercontent.com/hasura/quickstart-docker-git/master/_docs/quickstart-prep-repo.png)
+
+   - push your changes to the remote
+
+     **``git push hasura master``**
+     
+That's it! Your starter kit in now live! Check it out at the service's external endpoint (*from step-3*).
+
+![external endpoint](https://raw.githubusercontent.com/hasura/quickstart-docker-git/master/_docs/quickstart-external-endpoint.png)
 
 
-# `git push` your code as a service on the cloud
+# Additional Information
 
-If you have gotten the base-repo of your choice to work on your machine, you may want to deploy your code as an API/service to the cloud. Using [Hasura](https://hasura.io), you can do that with a simple `git push` command. Follow these instructions to get started:
+- **Docker**: You can use ``docker build`` and ``docker run`` to build your own image and get a running container. Basic configuration options are specified in docker-config.yaml. [Custom or 3rd party Docker images can be deployed on Hasura](https://docs.hasura.io/0.14/ref/custom-microservices/creating-docker-microservices.html) with the same ease.
 
-- Get yourself a free Hasura project by signing up at the [Project Dashboard](https://dashboard.hasura.io)
-- Check out the reference documentation on [how to create a `git push` service and deploy your code as a service](https://docs.hasura.io/0.14/ref/custom-microservices/creating-git-push-microservices.html)
+- **What is not included**: This is just a collection of quickstart repos. The idea is to modify the quickstart template as you need to get to a basic setup that works. Hence, this doesn't include things like setting up docker-compose files or more advanced framework specific configurations yet.
+- **Repo structure**: Every base repo has the following structure:
+  ```
+  /
+  --Dockerfile
+  --docker-config.yaml
+  --README.md
+  --app/
+  ```
 
-# Automated Docker hub builds
+  The README inside each base repo contains further instructions.
+  
+- **Automated Docker hub builds**: All base repos in this collection can readily be integrated to setup an automated docker image build system.
+  
+  Read here for more details:
+  [https://docs.docker.com/docker-hub/github/](https://docs.docker.com/docker-hub/github/)
 
-All base repos in this collection can readily be integrated to setup an
-automated docker image build system.
 
-Read here for more details:
-[https://docs.docker.com/docker-hub/github/](https://docs.docker.com/docker-hub/github/)
-
-
-# Contribution needed!
+# Contribution Needed!
 
 Please fork, file comments/bugs and submit your PRs!  We've created a list of
 issues where active help is required:
@@ -98,5 +106,3 @@ Some important things to keep in mind when contributing:
 1. Expose only one port, and one data volume to help keep things simple
 2. Annotate the ``Dockerfile`` with comments where you expect users to modify
 3. Try to document the following major use cases when writing your README: ``docker build``, ``git push`` based automated docker build, ``docker run``
-
-
