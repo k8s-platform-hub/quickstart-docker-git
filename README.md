@@ -50,8 +50,6 @@ To use any base-repo, do the following:
 
 - Clone this repo:
   ``git clone https://github.com/hasura/quickstart-docker-git``
-- Copy the relevant base-repo:
-  ``mv quickstart-docker-git/nodejs-express my-node-project``
 
 - Copy the relevant base-repo:
   ``mv quickstart-docker-git/nodejs-express my-node-project``
