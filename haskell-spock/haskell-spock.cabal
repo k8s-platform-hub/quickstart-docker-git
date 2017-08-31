@@ -20,7 +20,11 @@ library
   build-depends:       base >= 4.7 && < 5
   default-language:    Haskell2010
 
+<<<<<<< HEAD
 executable haskell-spock
+=======
+executable haskell-spock-exe
+>>>>>>> b0e7d169e4b79859a83f968ce2e524d677e56fd3
   hs-source-dirs:      app
   main-is:             Main.hs
   ghc-options:         -threaded -rtsopts -with-rtsopts=-N
