@@ -1,0 +1,13 @@
+[
+    {
+	"name": "hello",
+	"env": "python",
+	"file": "hello.py",
+	"http_triggers": [
+	    {
+		"method": "GET",
+		"urlpattern": "/hello"
+	    }
+	]
+    },
+ ]
