@@ -29,7 +29,7 @@ To use any of the starter kits, follow these instructions:
      
      ``git clone https://github.com/hasura/quickstart-docker-git``
 
-![git clone](_docs/quickstart-git-clone.png)
+![git clone](_docs/qs-git-clone.png)
 
    - Copy the relevant starter kit: e.g. to use the nodejs + express starter kit,
   
@@ -57,7 +57,7 @@ To use any of the starter kits, follow these instructions:
      
      **Note: replace *\<service-name>*, *\<project-name>* with the name/sub-domain of the service created in step-3 and name of the project created in step-1 respectively. Check the image below for reference**
 
-![modify repo](_docs/quickstart-repo-prepare.png)
+![modify repo](_docs/qs-prep-remote.png)
 
    - push your changes to the remote
 
