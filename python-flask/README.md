@@ -31,6 +31,13 @@ Follow the steps mentioned below for git based pipeline
     $ git push <remote> master
     ```
 
+# Local development
+
+```bash
+$ cd app/src
+$ pip install -r requirements.txt
+$ FLASK_APP=__init__.py flask run
+```
 # Advanced usage
 
 ### **Port**
