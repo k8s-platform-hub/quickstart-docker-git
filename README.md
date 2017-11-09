@@ -1,6 +1,6 @@
 # Deprecated
 
-This repository is deprecated and the majority of it has been moved to github.com/hasura/microservice-templates.
+This repository is deprecated and the majority of it has been moved to [hasura/microservie-templates](https://github.com/hasura/microservice-templates).
 
 
 ----------------------------
