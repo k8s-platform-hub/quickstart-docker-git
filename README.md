@@ -1,3 +1,13 @@
+# Deprecated
+
+This repository is deprecated and the majority of it has been moved to github.com/hasura/microservice-templates.
+
+
+----------------------------
+
+
+
+
 # quickstart-docker-git
 
 [Hasura](https://hasura.io) is a platform for building and deploying application backends. The platform is a [Kubernetes](https://kubernetes.io) based PaaS (*Platform-as-a-Service to deploy backends*) and a PostgreSQL based BaaS (*Backend-as-a-Service to rapidly build backends*).
